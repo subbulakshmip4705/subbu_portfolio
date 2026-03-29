@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Subbulakshmi Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ROOT */
+:root { --nav-height:70px; }
+
+html { scroll-behavior:smooth; }
+
+body {
+font-family:'Segoe UI',sans-serif;
+cursor:none;
+}
+
+/* DARK MODE */
+.dark { background:#121212;color:white; }
+.dark .navbar { background:#d406f0; }
+.dark .card { background:#1e1e1e;color:white; }
+.dark .skill-box { background:#2a2a2a;color:white; }
+.dark .footer { background:#d406f0; }
+
+/* CURSOR */
+.cursor{
+width:15px;height:15px;background:violet;
+position:fixed;border-radius:50%;
+pointer-events:none;z-index:9999;
+box-shadow:0 0 15px violet;
+}
+
+/* SCROLL BAR */
+#progress{
+position:fixed;top:0;left:0;height:5px;
+background:violet;width:0%;z-index:999;
+}
+
+/* NAVBAR */
+.navbar{
+background:rgb(197,6,156);
+height:var(--nav-height);
+}
+.nav-link{
+color:white!important;
+position:relative;
+}
+.nav-link::after{
+content:"";
+width:0;height:2px;background:violet;
+position:absolute;left:0;bottom:0;
+transition:0.3s;
+}
+.nav-link:hover::after{ width:100%; }
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg,violet,purple);
+color:white;text-align:center;
+padding:100px 20px 80px;
+}
+.hero img{
+width:180px;height:180px;
+object-fit:cover;border-radius:50%;
+border:5px solid white;margin-bottom:20px;
+transition:0.4s;
+}
+.hero img:hover{
+transform:scale(1.1);
+box-shadow:0 0 25px white;
+}
+
+/* SECTION */
+.section{
+padding:80px 20px;
+scroll-margin-top:var(--nav-height);
+}
+
+/* TITLE */
+.section-title{
+text-align:center;margin-bottom:30px;
+font-weight:bold;
+}
+.section-title::after{
+content:"";
+width:60px;height:4px;
+background:rgb(243, 112, 243);
+display:block;margin:10px auto;
+}
+
+/* SKILLS */
+.skill-box{
+background:#ffbdf4;
+padding:10px 15px;
+border-radius:20px;
+display:inline-block;
+margin:8px;
+transition:0.3s;
+}
+.skill-box:hover{
+background:violet;color:white;
+transform:scale(1.1);
+}
+
+/* CARD */
+.card{
+transition:0.4s;cursor:pointer;
+background:violet;color:white;
+}
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* BUTTON */
+.btn-custom{
+background:violet;color:white;
+}
+.btn-custom:hover{
+transform:translateY(-5px);
+box-shadow:0 0 15px violet;
+}
+
+/* FOOTER */
+.footer{
+background:#d406f0;color:white;
+text-align:center;padding:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="progress"></div>
+<div class="cursor"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand text-white">👩🏻‍💼 SUBBULAKSHMI</a>
+
+<button class="navbar-toggler bg-white" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+
+<button id="darkToggle" class="btn btn-light ms-3">🌙</button>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<img src="pass.png.jpeg">
+<h1>Subbulakshmi</h1>
+<p id="typing"></p>
+
+<a href="aresume.pdf" download class="btn btn-custom mt-3">📄 Download Resume</a>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section container">
+<h2 class="section-title">About Me</h2>
+<p class="text-center">
+Versatile Developer with a strong foundation in Computer Applications, specializing in building end-to-end web solutions. Expert at balancing complex back-end architecture with high-fidelity front-end experiences. Proficient in modern JavaScript ecosystems, database management, and focus on writing clean, maintainable code across the entire stack</p>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="section container">
+<h2 class="section-title">Skills</h2>
+<div class="text-center">
+<span class="skill-box">HTML</span>
+<span class="skill-box">CSS</span>
+<span class="skill-box">JavaScript</span>
+<span class="skill-box">Bootstrap</span>
+<span class="skill-box">PHP</span>
+<span class="skill-box">Python</span>
+<span class="skill-box">Java</span>
+<span class="skill-box">SQL</span>
+<span class="skill-box">R</span>
+<span class="skill-box">Google colab</span>
+<span class="skill-box">Visual Studio Code</span>
+<span class="skill-box">Canva</span>
+<span class="skill-box">Sketchpad</span>
+<span class="skill-box">Vimeo</span>
+<span class="skill-box">WeVideo</span>
+<span class="skill-box">MS Office</span>
+<span class="skill-box">C</span>
+<span class="skill-box">C++</span>
+<span class="skill-box">ASP.NET</span>
+<span class="skill-box">VB.NET</span>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section container">
+<h2 class="section-title">Projects</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="card p-3" onclick="openModal('Portfolio Website',['project1.jpg'])" style="background:violet;color:white;">
+<h5>Portfolio Website</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3" onclick="openModal('Smart Movie Reservation Portal',['movie2.jpeg','movie1.jpeg','movie3.jpeg','movie4.jpeg','movie5.jpeg','movie6.jpeg','movie7.jpeg','movie8.jpeg'])" style="background:violet;color:white;">
+<h5>Smart Movie Reservation Portal</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3" onclick="openModal('Student Laptop Distribution System',['laptop.jpeg','laptop1.jpeg','laptop2.jpeg','laptop3.jpeg'])" style="background:violet;color:white;">
+<h5>Student Laptop Distribution System</h5>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="projectModal">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 id="modalTitle"></h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<div id="carouselExample" class="carousel slide">
+
+<div class="carousel-inner" id="carouselImages"></div>
+
+<button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Section</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* SECTION */
+.section{
+padding:80px 20px;
+}
+
+/* TITLE */
+.section-title{
+text-align:center;
+margin-bottom:30px;
+font-weight:bold;
+}
+.section-title::after{
+content:"";
+width:60px;height:4px;
+background:violet;
+display:block;
+margin:10px auto;
+}
+
+/* CONTACT BOX */
+.contact-box{
+background: linear-gradient(135deg, violet, purple);
+color: white;
+transition: 0.3s;
+border-radius:15px;
+}
+
+/* HOVER */
+.contact-box:hover{
+transform: translateY(-8px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* LINKS */
+.contact-link{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.contact-link:hover{
+text-decoration:underline;
+color:#ffe6ff;
+}
+
+/* INPUT FIELDS */
+.contact-box input,
+.contact-box textarea{
+border-radius:10px;
+border:none;
+padding:10px;
+}
+
+/* BUTTON */
+.btn-custom{
+background:violet;
+color:white;
+border:none;
+}
+.btn-custom:hover{
+background:purple;
+}
+
+/* DARK MODE (optional if using) */
+.dark .contact-box{
+background:#1e1e1e;
+color:white;
+}
+.dark .contact-link{
+color:#ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CONTACT -->
+<div id="contact" class="section container">
+<h2 class="section-title">Contact Me</h2>
+
+<div class="row g-4">
+
+<!-- LEFT -->
+<div class="col-md-5">
+<div class="p-4 shadow contact-box">
+
+<h4 class="mb-3">Get in Touch</h4>
+
+<p>📞 <strong>Phone:</strong> 9585976676</p>
+
+<p>✉️ <strong>Email:</strong><br>
+<a href="mailto:subbulakshmi4705@gmail.com" class="contact-link">
+subbulakshmi4705@gmail.com
+</a>
+</p>
+
+<p>🔗 <strong>LinkedIn:</strong><br>
+<a href="https://www.linkedin.com/in/subbulakshmip" target="_blank" class="contact-link">
+View Profile
+</a>
+</p>
+
+</div>
+</div>
+
+<!-- RIGHT -->
+<div class="col-md-7">
+<div class="p-4 shadow contact-box">
+
+<h4 class="mb-3">Send Message</h4>
+
+<form onsubmit="sendMail(event)">
+
+<input id="name" class="form-control mb-3" placeholder="Your Name" required>
+
+<input id="email" type="email" class="form-control mb-3" placeholder="Your Email" required>
+
+<textarea id="message" rows="4" class="form-control mb-3" placeholder="Your Message" required></textarea>
+
+<button class="btn btn-custom w-100">Send Message 🚀</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- JS -->
+<script>
+
+/* MAIL FUNCTION */
+function sendMail(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+
+let link=`mailto:subbulakshmi4705@gmail.com
+?subject=Portfolio Contact from ${name}
+&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+window.location.href=link;
+}
+
+</script>
+
+</body>
+</html>
+
+
+<div class="footer">© 2026 Subbulakshmi</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* TYPING */
+const words=["Web Developer","Designer","Problem Solver"];
+let i=0,j=0,txt="",del=false;
+function type(){
+txt=words[i];
+document.getElementById("typing").innerHTML=txt.substring(0,j);
+if(!del){ j++; if(j>txt.length){ del=true; setTimeout(type,1000); return; } }
+else{ j--; if(j<0){ del=false; i=(i+1)%words.length; } }
+setTimeout(type,100);
+}
+type();
+
+/* SCROLL BAR */
+window.onscroll=function(){
+let winScroll=document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+document.getElementById("progress").style.width=(winScroll/height)*100+"%";
+}
+
+/* CURSOR */
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+cursor.style.top=e.clientY+"px";
+cursor.style.left=e.clientX+"px";
+});
+
+/* DARK MODE */
+document.getElementById("darkToggle").onclick=()=>{
+document.body.classList.toggle("dark");
+}
+
+/* MODAL WITH SLIDER */
+function openModal(title,images){
+document.getElementById("modalTitle").innerText=title;
+
+let container=document.getElementById("carouselImages");
+container.innerHTML="";
+
+images.forEach((img,index)=>{
+container.innerHTML+=`
+<div class="carousel-item ${index===0?'active':''}">
+<img src="${img}" class="d-block w-100 rounded">
+</div>`;
+});
+
+new bootstrap.Modal(document.getElementById('projectModal')).show();
+}
+
+/* MAIL */
+function sendMail(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let message=document.getElementById("message").value;
+
+let link=`mailto:subbulakshmi4705@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+window.location.href=link;
+}
+
+</script>
+
+</body>
+</html>
